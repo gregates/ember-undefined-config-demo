@@ -1,6 +1,9 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  if (environment === undefined) {
+    throw "config called with undefined environment";
+  }
   var ENV = {
     modulePrefix: 'demo-app',
     environment: environment,
